@@ -1,1 +1,1 @@
-# Laravel AdminLTE by Kilimall
+# Laravel Data Dictionary Viewer
