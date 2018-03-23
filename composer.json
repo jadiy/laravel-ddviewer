@@ -8,7 +8,6 @@
             "email": "joming.he@kilimall.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "laravel/framework": ">=5.0.0"
