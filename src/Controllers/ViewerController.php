@@ -13,14 +13,14 @@ class ViewerController extends Controller
     {
         $connections = config('database.connections');
         $connection = $request->get('connection', config('database.default'));
-        $connection = $connections[$connection];
-        $database = $connection['database'];
-        $tables = DB::select('show tables');
+        $database = $connections[$connection]['database'];
+        $tables = DB::connection($connection)->select('show tables');
         $tables = array_column($tables, 'Tables_in_'.$database);
+        $ret = [];
         foreach($tables as $table) {
-            $desc = DB::select("SHOW FULL COLUMNS FROM $table");
+            $desc = DB::connection($connection)->select("SHOW FULL COLUMNS FROM $table");
             $ret[$table] = $desc;
         }
-        return view('viewer::viewer', [ 'tables' => $ret ]);
+        return view('viewer::viewer', [ 'tables' => $ret, 'connections' => $connections, 'connection' => $connection ]);
     }
 }
