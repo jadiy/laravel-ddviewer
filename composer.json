@@ -1,18 +1,18 @@
 {
-    "name": "kilimall/adminlte",
-    "description": "Laravel AdminLTE by Kilimall",
-    "require": {
-        "encore/laravel-admin": "^1.5"
-    },
+    "name": "kilimall/laravel-dd-viewer",
+    "description": "Laravel Data Dictionary Viewer",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Joming",
+            "name": "Joming He",
             "email": "joming.he@kilimall.com"
         }
     ],
+    "minimum-stability": "dev",
+    "require": {},
     "autoload": {
         "psr-4": {
-            "Hello\\": "src/"
+            "ddviewer\\": "src/"
         }
     }
 }
