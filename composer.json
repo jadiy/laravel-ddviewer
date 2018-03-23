@@ -14,5 +14,12 @@
         "psr-4": {
             "ddviewer\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kilimall\\Viewer\\ViewerServiceProvider"
+            ]
+        }
     }
 }
