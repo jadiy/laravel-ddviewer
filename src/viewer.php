@@ -1,5 +1,7 @@
 <?php
 namespace Kilimall\Viewer;
+
+use Illuminate\Support\Facades\Route;
  
 class Viewer
 {
@@ -15,8 +17,6 @@ class Viewer
      */
     public static function registerRoutes()
     {
-        parent::routes(function ($router) {
-            $router->get('ddviewer', 'Kilimall\Viewer\Controllers\ViewerController@index');
-        });
+        Route::get('ddviewer', 'Kilimall\Viewer\Controllers\ViewerController@index');
     }
 }

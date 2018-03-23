@@ -1,5 +1,7 @@
 <?php
-namespace Kilimall\Viewer;
+namespace Kilimall\Viewer\Controllers;
+
+use Illuminate\Routing\Controller;
 
 class ViewerController extends Controller
 {
