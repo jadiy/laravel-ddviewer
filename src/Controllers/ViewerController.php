@@ -7,6 +7,6 @@ class ViewerController extends Controller
 {
     public function index()
     {
-        echo 'Let us gogogo';
+        echo 'Let us go!';
     }
 }
